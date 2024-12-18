@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="advent_of_code.cpp" />
+    <ClCompile Include="get_input_vectors.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="day_one.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="day_one_inputs.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
