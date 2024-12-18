@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ethanm\\source\\repos\\advent_of_code\\day_two\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3900EF4-3EB5-45E1-9A20-CF4CBE942157}|day_two.vcxproj|C:\\Users\\Ethanm\\source\\repos\\advent_of_code\\day_two\\day_two.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C3900EF4-3EB5-45E1-9A20-CF4CBE942157}|day_two.vcxproj|solutionrelative:day_two.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "day_two.cpp",
+              "DocumentMoniker": "C:\\Users\\Ethanm\\source\\repos\\advent_of_code\\day_two\\day_two.cpp",
+              "RelativeDocumentMoniker": "day_two.cpp",
+              "ToolTip": "C:\\Users\\Ethanm\\source\\repos\\advent_of_code\\day_two\\day_two.cpp",
+              "RelativeToolTip": "day_two.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-18T21:03:12.249Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
