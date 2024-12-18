@@ -3,7 +3,11 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
+#include <fstream>
+#include <string>
 
-int day_one(std::vector<int> arrOne, std::vector<int> arrTwo);
 std::pair<std::vector<int>, std::vector<int>> get_input_vectors();
+int day_two(std::vector<int> vecOne, std::vector<int> vecTwo);
+
 #endif MAIN_H
