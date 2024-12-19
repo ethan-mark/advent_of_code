@@ -14,8 +14,7 @@ std::vector<std::vector<int>> get_input_vectors() {
 	while (std::getline(file, str)) {
         std::istringstream iss(str);
         int number = {}; 
-        for (int i=0; i < iss.str().size(); i++){
-            iss >> number;
+        while (iss>> number){
             row_vector.push_back(number);
         }
         input_vector.push_back(row_vector);
@@ -23,31 +22,56 @@ std::vector<std::vector<int>> get_input_vectors() {
     return input_vector; 
 }
 
-void determine_level_safety(std::vector<std::vector<int>> vec){
-    std::map<std::string,int> safety_tracker = {}; 
+int determine_level_safety(std::vector<std::vector<int>> vec){
+    std::map<int,int> safety_tracker = {}; 
     int index = {0};
     while (index < vec.size()){
+        std::vector<int> &row = vec[index];
         bool isSubtract = false;
-        bool isAdd = false;
-        if (vec[index][0] < vec[index][1]){
-            isAdd = true;
-        }
-        else if (vec[index][0]> vec[index][1]){
+        if (row[0]> row[1]){
             isSubtract = true;
         }
-        else if (vec[index][0] == vec[index][1]){
+        else if (row[0] == row[1]){
             continue;
         }
-        int previous_number = vec[index][1];
-        for (int i=2; i < vec[index].size()-1 ;i ++){
-            int current_number = vec[index][i]
-            if (isAdd && abs(previous_number - current_number )){
-                
+        bool safe = true;
+        int previous_number = {row[1]};
+        for (int i =2; i < row.size(); i++){
+            int current_number = row[i];
+            if (previous_number == current_number){
+                safe = false;
+                break;
             }
-           
+            if (isSubtract){
+                if ( (abs(previous_number - current_number) < 1) || (abs(previous_number - current_number) > 3) ){
+                    safe = false;
+                    break;
+                }
+            }
+            if (!isSubtract){
+                if ( (abs(previous_number - current_number) < 1) || (abs(previous_number - current_number) > 3) ){
+                    safe = false;
+                    break;
+                }
+            }
+            
+            previous_number = current_number;
+            
         }
+        if (safe){
+            safety_tracker[index]=1; 
+        }
+        std::cout << index << "\n"; 
         index++;
     }
+
+    int result = {0};
+    for (auto &x : safety_tracker){ // &x - reference to each element 
+        result += x.second;
+        std::cout << x.first << " " << x.second << " "<<result<< "\n";
+    }
+    std::cout << result << std::endl; 
+    return result;
 }
 
 
